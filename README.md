@@ -1,28 +1,28 @@
-# periodic.js
+# nearest-periodic-value.js
+[![Travis build status](http://img.shields.io/travis/jmeas/nearest-periodic-value.js.svg?style=flat)](https://travis-ci.org/jmeas/nearest-periodic-value.js)
+[![Code Climate](https://codeclimate.com/github/jmeas/nearest-periodic-value.js/badges/gpa.svg)](https://codeclimate.com/github/jmeas/nearest-periodic-value.js)
+[![Test Coverage](https://codeclimate.com/github/jmeas/nearest-periodic-value.js/badges/coverage.svg)](https://codeclimate.com/github/jmeas/nearest-periodic-value.js)
+[![Dependency Status](https://david-dm.org/jmeas/nearest-periodic-value.js.svg)](https://david-dm.org/jmeas/nearest-periodic-value.js) 
+[![devDependency Status](https://david-dm.org/jmeas/nearest-periodic-value.js/dev-status.svg)](https://david-dm.org/jmeas/nearest-periodic-value.js#info=devDependencies)
 
-Utilities for periodic functions. Useful for certain date operations.
+Find the nearest value of a discrete periodic function, given a point.
 
-### What are periodic values?
+### What are discrete periodic functions?
 
-Periodic values are values that repeat in regular intervals, or periods. Consider
-the values `[2, 5, 8]`. This is a set with a period of 3.
+Periodic functions are functions that repeat. Discrete functions are functions whose values do not
+connect. An example of a discrete periodic function is the function of "Wednesdays" on a calendar.
+Wednesdays are discrete values along a timeline, and they repeat every 7 days.
 
 ### Terminology
 
-The collection of values that make up a periodic function are called the `solutions`.
-Any given solution is called a `test`.
+The members of a periodic function's output are called the "values." A single member is called a "value."
+
+The interval that the function repeats along is called the "period."
+
+A "point" is any value in the domain of the function.
 
 ### API
 
-##### `nearest(point, test, period)`
+##### `nearestPeriodicValue(point, value, period)`
 
 Find the nearest value to `point`. Supply a `test` value from the set of solutions and a `period`.
-
-##### `nearestGreaterThan(point, test, period)`
-
-Find the nearest value greater than `point`. Supply a `test` (one value that repeats) and a `period`.
-
-##### `nearestLessThan(point, test, period)`
-
-Find the nearest value less than `point`. Supply a `test` (one value that repeats) and a `period`.
-
