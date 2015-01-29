@@ -9,7 +9,7 @@
 })(this, function() {
   'use strict';
 
-  // @include ./index.js
+  // @include ./nearest-periodic-value.js
   
   return <%= exportVarName %>;
 });
