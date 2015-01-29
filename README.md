@@ -15,9 +15,9 @@ Wednesdays are discrete values along a timeline, and they repeat every 7 days.
 
 ### Terminology
 
-The members of a periodic function's output are called the "values." A single member is called a "value."
+The members of a periodic function's output are the "values." A single member is a "value."
 
-The interval that the function repeats along is called the "period."
+The interval that the function repeats along is the "period."
 
 A "point" is any value in the domain of the function.
 
@@ -25,4 +25,4 @@ A "point" is any value in the domain of the function.
 
 ##### `nearestPeriodicValue(point, value, period)`
 
-Find the nearest value to `point`. Supply a `test` value from the set of solutions and a `period`.
+Find the nearest value to `point`. Supply a `value` from the codomain of the function, and its `period`.
