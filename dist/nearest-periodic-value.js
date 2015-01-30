@@ -10,10 +10,10 @@
   "use strict";
 
   var nearestPeriodicValue = function (point, value, period) {
-    // Subtract any excess from our value, which is
-    // given by the period times the number of periods
-    // in the diff. parseInt drops our decimal values.
-    return value - period * parseInt((value - point) / period);
+    // Adjust our value by an amount given by the closest #
+    // of periods contained in the distance between the point
+    // and the value
+    return value - period * Math.round((value - point) / period);
   };
 
 

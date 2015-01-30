@@ -1,4 +1,14 @@
 describe('Nearest', function() {
+  describe('when the point is closer to the next value', function() {
+    beforeEach(function() {
+      this.nearest = nearestPeriodicValue(5, 0, 6);
+    });
+
+    it('should return the correct value', function() {
+      expect(this.nearest).to.equal(6);
+    });
+  });
+
   describe('when the point is the nearest solution', function() {
     describe('and the test is also that solution', function() {
       beforeEach(function() {

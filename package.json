@@ -1,6 +1,6 @@
 {
   "name": "nearest-periodic-value",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find the nearest value of a discrete periodic function, given a point.",
   "main": "dist/nearest-periodic-value.js",
   "scripts": {
