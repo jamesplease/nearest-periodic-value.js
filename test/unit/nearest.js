@@ -1,7 +1,7 @@
 describe('Nearest', function() {
   describe('when the point is closer to the next value', function() {
     beforeEach(function() {
-      this.nearest = nearestPeriodicValue(5, 6, 6);
+      this.nearest = nearestPeriodicValue(5, 0, 6);
     });
 
     it('should return the correct value', function() {
