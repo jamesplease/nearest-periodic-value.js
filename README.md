@@ -26,3 +26,9 @@ A "point" is any value in the domain of the function.
 ##### `nearestPeriodicValue(point, value, period)`
 
 Find the nearest value to `point`. Supply a `value` from the codomain of the function, and its `period`.
+
+### FAQ
+
+**What if my point is equidistant between two values?**
+
+The value in front of your point will be chosen.

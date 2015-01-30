@@ -1,4 +1,52 @@
 describe('Nearest', function() {
+  describe('Equidistant; period = 6, point = 0', function() {
+    beforeEach(function() {
+      this.period = 6;
+      this.point = 0;
+    });
+
+    describe('value = -9', function() {
+      beforeEach(function() {
+        this.nearest = nearestPeriodicValue(0, -9, this.period);
+      });
+
+      it('should return the correct value', function() {
+        expect(this.nearest).to.equal(3);
+      });
+    });
+
+    describe('value = -3', function() {
+      beforeEach(function() {
+        this.nearest = nearestPeriodicValue(0, -3, this.period);
+      });
+
+      it('should return the correct value', function() {
+        expect(this.nearest).to.equal(3);
+      });
+    });
+  
+    describe('value = 3', function() {
+      beforeEach(function() {
+        this.nearest = nearestPeriodicValue(0, 3, this.period);
+      });
+
+      it('should return the correct value', function() {
+        expect(this.nearest).to.equal(3);
+      });
+    });
+
+    describe('value = 9', function() {
+      beforeEach(function() {
+        this.nearest = nearestPeriodicValue(0, 3, this.period);
+      });
+
+      it('should return the correct value', function() {
+        expect(this.nearest).to.equal(3);
+      });
+    });
+  });
+
+
   describe('when the point is closer to the next value', function() {
     beforeEach(function() {
       this.nearest = nearestPeriodicValue(5, 0, 6);
