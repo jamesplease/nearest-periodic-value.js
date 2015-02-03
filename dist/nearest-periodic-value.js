@@ -1,17 +1,11 @@
-(function (root, factory) {
-  if (typeof define === "function" && define.amd) {
-    define([], factory);
-  } else if (typeof exports !== "undefined") {
-    module.exports = factory();
-  } else {
-    root.nearestPeriodicValue = factory();
-  }
+(function (global, factory) {
+  typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory() : typeof define === "function" && define.amd ? define(factory) : global.nearestPeriodicValue = factory();
 })(this, function () {
   "use strict";
 
   /*jshint -W018 */
 
-  var nearestPeriodicValue = function (point, value, period) {
+  function nearestPeriodicValue(point, value, period) {
     var relation = (value - point) / period;
 
     // We're equidistant from the nearest point if the
@@ -27,11 +21,10 @@
     // of periods contained in the distance between the point
     // and the value
     return mod + (value - period * Math.round(relation));
-  };
+  }
 
+  var nearest_periodic_value = nearestPeriodicValue;
 
-
-
-  return nearestPeriodicValue;
+  return nearest_periodic_value;
 });
-//# sourceMappingURL=nearest-periodic-value.js.map
+//# sourceMappingURL=./nearest-periodic-value.js.map
